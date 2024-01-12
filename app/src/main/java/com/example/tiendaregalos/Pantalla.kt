@@ -44,12 +44,15 @@ fun PantallaPrincipal(controladorNavegacion: NavHostController) {
     )
 
     LazyColumn(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(15.dp), // Ajusta el espacio entre los bordes y las columnas
         contentPadding = PaddingValues(16.dp)
     ) {
         items(navItems.chunked(2)) { rowItems ->
             Row(
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier
+                    .fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
                 for (item in rowItems) {
